@@ -20,7 +20,6 @@ cask 'franz'
 cask 'sequel-pro'
 cask 'docker'
 cask 'docker-toolbox'
-cask 'microsoft-office'
 
 ## caskroom/fonts
 tap 'caskroom/fonts'
