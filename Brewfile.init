@@ -1,0 +1,29 @@
+# tap repositories and their packages
+
+## caskroom/cask
+cask 'adobe-creative-cloud'
+cask 'slack'
+cask 'ansible-dk'
+cask 'evernote'
+cask 'google-chrome'
+cask 'skype'
+cask 'sourcetree'
+cask 'sublime-text'
+cask 'transmit'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'alfred'
+cask 'iterm2'
+cask 'zoomus'
+cask 'kindle'
+cask 'franz'
+cask 'sequel-pro'
+cask 'docker'
+cask 'docker-toolbox'
+
+## caskroom/fonts
+tap 'caskroom/fonts'
+
+# Other Homebrew packages
+brew 'vim'
+brew 'wget'
