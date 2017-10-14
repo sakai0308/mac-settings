@@ -36,6 +36,9 @@
 	# Dashboardを無効にする
 	defaults write com.apple.dashboard mcx-disabled -bool true
 
+	# ウインドウをアプリケーションアイコンにしまう
+	defaults write com.apple.dock minimize-to-application -bool true
+
     # restart to enable configs
     killall Dock
 
