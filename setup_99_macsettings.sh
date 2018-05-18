@@ -110,9 +110,6 @@
 	defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 	defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-	# スクロール方向をナチュラルじゃない方向に
-	defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-
 # Menubar
 	# バッテリー残量を％表記に
 	defaults write com.apple.menuextra.battery ShowPercent -string "YES"
@@ -141,6 +138,9 @@
 
 	# ネットワーク上のフォルダに「.DS_Store」を作成しない
 	defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+	# Mac がバックグラウンドでアップデートをダウンロードしないようにする
+	defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -boolean FALSE
 
     # restart to enable configs
 	killall SystemUIServer
