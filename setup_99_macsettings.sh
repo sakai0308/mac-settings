@@ -20,15 +20,15 @@
 	# Show the hidden files （不可視ファイルを表示）
 	defaults write com.apple.finder AppleShowAllFiles YES
 
-    # restart to enable configs
-    killall Finder
+	# restart to enable configs
+	killall Finder
 
 # Dock
 	# 通常サイズ
 	defaults write com.apple.dock tilesize -int 32
 
 	# Magnificate the Dock （Dock の拡大機能を入にする）
-    defaults write com.apple.dock magnification -bool true
+	defaults write com.apple.dock magnification -bool true
 
 	# Wipe all app icons from the Dock （Dock に標準で入っている全てのアプリを消す、Finder とごみ箱は消えない）
 	defaults write com.apple.dock persistent-apps -array
@@ -39,12 +39,12 @@
 	# ウインドウをアプリケーションアイコンにしまう
 	defaults write com.apple.dock minimize-to-application -bool true
 
-    # restart to enable configs
-    killall Dock
+	# restart to enable configs
+	killall Dock
 
 # Keyboard （キーボードで Macを操作する人は必見）
 	# Enable full keyboard access for all controls
-    defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+	defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 	# キーリピート速度を1に設定（小さい程速い）
 	defaults write -g KeyRepeat -int 2
@@ -143,5 +143,5 @@
 	# Mac がバックグラウンドでアップデートをダウンロードしないようにする
 	defaults write ~/Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -boolean FALSE
 
-    # restart to enable configs
+	# restart to enable configs
 	killall SystemUIServer
