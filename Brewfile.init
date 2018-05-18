@@ -16,7 +16,6 @@ cask 'kindle'
 cask 'franz'
 cask 'sequel-pro'
 cask 'docker'
-cask 'docker-toolbox'
 cask 'visual-studio-code'
 cask '1password'
 cask 'java'
@@ -28,3 +27,9 @@ tap 'caskroom/fonts'
 # Other Homebrew packages
 brew 'vim'
 brew 'wget'
+
+# セキュリティの許可を行う必要あり
+# System Preferences → Security & Privacy → General
+cask 'virtualbox'
+cask 'docker-toolbox'
+cask 'zoomus'
