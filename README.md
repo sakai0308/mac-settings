@@ -12,3 +12,7 @@
 * Microsoft Office 365
 * Adobe Creative Cloud
 * ScanSnap
+
+## 以下の設定は手動で行う
+* ライブ変換の停止
+* Finder環境設定でサイドバーに表示する項目を変更
