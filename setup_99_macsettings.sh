@@ -66,16 +66,16 @@
 	# 11: Launchpad
 	# 12: Notification Center
 	# Top left screen corner → Put display to sleep （左上 → ディスプレイをスリープ）
-	defaults write com.apple.dock wvous-tl-corner -int 10
+	defaults write com.apple.dock wvous-tl-corner -int 0 #10
 	defaults write com.apple.dock wvous-tl-modifier -int 0
 	# Top right screen corner → Desktop （右上 → デスクトップを表示）
-	defaults write com.apple.dock wvous-tr-corner -int 4
+	defaults write com.apple.dock wvous-tr-corner -int 0 #4
 	defaults write com.apple.dock wvous-tr-modifier -int 0
 	# Bottom left screen corner → Mission Control （左下 → Mission Control）
-	defaults write com.apple.dock wvous-bl-corner -int 2
+	defaults write com.apple.dock wvous-bl-corner -int 0 #2
 	defaults write com.apple.dock wvous-bl-modifier -int 0
 	# Bottom right screen corner → Show application windows （右下 → アプリケーションウィンドウ）
-	defaults write com.apple.dock wvous-br-corner -int 3
+	defaults write com.apple.dock wvous-br-corner -int 0 #3
 	defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Safari
@@ -100,11 +100,12 @@
 
 # Trackpad
 	# Enable `Tap to click` （タップでクリックを有効にする）
-	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+	defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 	defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 	defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 	# Map bottom right Trackpad corner to right-click （右下をクリックで、副クリックに割り当てる）
+	# ※High Sierraだとこの設定が上手くいかない
 	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
 	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
 	defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
@@ -140,7 +141,7 @@
 	defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 	# Mac がバックグラウンドでアップデートをダウンロードしないようにする
-	defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -boolean FALSE
+	defaults write ~/Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -boolean FALSE
 
     # restart to enable configs
 	killall SystemUIServer
