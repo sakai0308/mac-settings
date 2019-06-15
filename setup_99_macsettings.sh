@@ -43,14 +43,15 @@
 	killall Dock
 
 # Keyboard （キーボードで Macを操作する人は必見）
+# ※設定後、要再起動
 	# Enable full keyboard access for all controls
 	defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 	# キーリピート速度を1に設定（小さい程速い）
-	defaults write -g KeyRepeat -int 2
+	defaults write NSGlobalDomain KeyRepeat -int 2
 
 	# キーリピート開始速度の早さを10に設定（小さい程早い）
-	defaults write -g InitialKeyRepeat -int 15
+	defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Mission Control
 	# Hot corners （Mission Control のホットコーナーの設定）
@@ -105,11 +106,11 @@
 	defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 	# Map bottom right Trackpad corner to right-click （右下をクリックで、副クリックに割り当てる）
-	# ※High Sierraだとこの設定が上手くいかない
-	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-	defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-	defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+	# TODO: High Sierraだとこの設定が上手くいかない
+	#defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
+	#defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -boolean false
+	#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+	#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -boolean false
 
 # Menubar
 	# バッテリー残量を％表記に
@@ -145,3 +146,7 @@
 
 	# restart to enable configs
 	killall SystemUIServer
+
+	# ライブ変換をオフにします
+	defaults write com.apple.inputmethod.Kotoeri 'JIMPrefLiveConversionKey' -bool false
+	killall -HUP JapaneseIM

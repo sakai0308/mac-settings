@@ -1,35 +1,32 @@
 # tap repositories and their packages
 
 ## caskroom/cask
-cask 'adobe-creative-cloud'
+#cask 'adobe-creative-cloud'
 cask 'slack'
-cask 'ansible-dk'
 cask 'evernote'
 cask 'google-chrome'
 cask 'skype'
 cask 'sourcetree'
 cask 'transmit'
-cask 'vagrant'
 cask 'alfred'
-cask 'iterm2'
 cask 'kindle'
 cask 'franz'
 cask 'sequel-pro'
 cask 'docker'
 cask 'visual-studio-code'
-cask '1password'
+#cask '1password'
 cask 'java'
 cask 'android-studio'
+cask 'postman'
+cask 'chatwork'
+cask 'dropbox'
 
 ## caskroom/fonts
 tap 'caskroom/fonts'
 
 # Other Homebrew packages
-brew 'vim'
 brew 'wget'
 
 # セキュリティの許可を行う必要あり
 # System Preferences → Security & Privacy → General
-cask 'virtualbox'
-cask 'docker-toolbox'
 cask 'zoomus'
